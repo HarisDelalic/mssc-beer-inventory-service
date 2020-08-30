@@ -33,4 +33,14 @@ public class BeerInventoryController {
                 .map(beerInventoryMapper::beerInventoryToBeerInventoryDto)
                 .collect(Collectors.toList());
     }
+
+    @GetMapping("api/v1/beer/{beerId}/total-quantity")
+    Integer getTotalQuantity(@PathVariable UUID beerId){
+        log.debug("Finding Total Quantity on Hand for beerId:" + beerId);
+
+        return beerInventoryRepository.findAllByBeerId(beerId)
+                .stream()
+                .mapToInt(beerInventory -> beerInventory.getQuantityOnHand())
+                .sum();
+    }
 }

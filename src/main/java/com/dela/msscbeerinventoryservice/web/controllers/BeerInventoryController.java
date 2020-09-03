@@ -1,8 +1,8 @@
-package guru.sfg.beer.inventory.service.web.controllers;
+package com.dela.msscbeerinventoryservice.web.controllers;
 
-import guru.sfg.beer.inventory.service.repositories.BeerInventoryRepository;
-import guru.sfg.beer.inventory.service.web.mappers.BeerInventoryMapper;
-import guru.sfg.beer.inventory.service.web.model.BeerInventoryDto;
+import com.dela.msscbeerinventoryservice.repositories.BeerInventoryRepository;
+import com.dela.msscbeerinventoryservice.web.mappers.BeerInventoryMapper;
+import com.dela.msscbeerinventoryservice.web.model.BeerInventoryDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -36,7 +36,6 @@ public class BeerInventoryController {
 
     @GetMapping("api/v1/beer/{beerId}/total-quantity")
     Integer getTotalQuantity(@PathVariable UUID beerId){
-        log.debug("Finding Total Quantity on Hand for beerId:" + beerId);
 
         return beerInventoryRepository.findAllByBeerId(beerId)
                 .stream()

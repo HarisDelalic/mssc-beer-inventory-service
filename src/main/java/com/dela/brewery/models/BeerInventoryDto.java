@@ -1,4 +1,4 @@
-package com.dela.msscbeerinventoryservice.web.model;
+package com.dela.brewery.models;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

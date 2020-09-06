@@ -1,4 +1,4 @@
-package com.dela.beer.inventory.service;
+package com.dela;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

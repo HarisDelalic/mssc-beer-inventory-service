@@ -1,7 +1,7 @@
 package com.dela.msscbeerinventoryservice.web.services;
 
-import com.dela.msscbeerinventoryservice.web.model.BeerDto;
-import com.dela.events.NewInventoryEvent;
+import com.dela.brewery.models.BeerDto;
+import com.dela.brewery.events.NewInventoryEvent;
 import com.dela.msscbeerinventoryservice.config.JmsConfig;
 import com.dela.msscbeerinventoryservice.domain.BeerInventory;
 import com.dela.msscbeerinventoryservice.repositories.BeerInventoryRepository;
@@ -26,7 +26,7 @@ public class InventoryListener {
 
 
         BeerDto beerDto = body.getPayload().getBeerDto();
-        log.info("Saving beerInventory for beer with ID: " + beerDto.getId());
+        log.info("Saving beerInventory for msscbeerorderservice with ID: " + beerDto.getId());
 //        TODO refactor to use builder pattern
         BeerInventory beerInventory = new BeerInventory();
         beerInventory.setBeerId(beerDto.getId());

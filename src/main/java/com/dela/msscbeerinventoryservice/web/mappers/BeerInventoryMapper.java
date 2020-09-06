@@ -1,7 +1,7 @@
 package com.dela.msscbeerinventoryservice.web.mappers;
 
 import com.dela.msscbeerinventoryservice.domain.BeerInventory;
-import com.dela.msscbeerinventoryservice.web.model.BeerInventoryDto;
+import com.dela.brewery.models.BeerInventoryDto;
 import org.mapstruct.Mapper;
 
 /**

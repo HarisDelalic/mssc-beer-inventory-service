@@ -2,7 +2,7 @@ package com.dela.msscbeerinventoryservice.web.controllers;
 
 import com.dela.msscbeerinventoryservice.repositories.BeerInventoryRepository;
 import com.dela.msscbeerinventoryservice.web.mappers.BeerInventoryMapper;
-import com.dela.msscbeerinventoryservice.web.model.BeerInventoryDto;
+import com.dela.brewery.models.BeerInventoryDto;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -24,7 +24,7 @@ public class BeerInventoryController {
     private final BeerInventoryRepository beerInventoryRepository;
     private final BeerInventoryMapper beerInventoryMapper;
 
-    @GetMapping("api/v1/beer/{beerId}/inventory")
+    @GetMapping("api/v1/msscbeerorderservice/{beerId}/inventory")
     List<BeerInventoryDto> listBeersById(@PathVariable UUID beerId){
         log.debug("Finding Inventory for beerId:" + beerId);
 
@@ -34,7 +34,7 @@ public class BeerInventoryController {
                 .collect(Collectors.toList());
     }
 
-    @GetMapping("api/v1/beer/{beerId}/total-quantity")
+    @GetMapping("api/v1/msscbeerorderservice/{beerId}/total-quantity")
     Integer getTotalQuantity(@PathVariable UUID beerId){
 
         return beerInventoryRepository.findAllByBeerId(beerId)

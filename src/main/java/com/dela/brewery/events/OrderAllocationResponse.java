@@ -1,4 +1,4 @@
-package com.dela.brewery.models;
+package com.dela.brewery.events;
 
 import com.dela.brewery.models.beer_order.BeerOrderDto;
 import lombok.AllArgsConstructor;

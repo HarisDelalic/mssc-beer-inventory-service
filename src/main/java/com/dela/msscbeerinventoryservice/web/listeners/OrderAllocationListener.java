@@ -1,7 +1,7 @@
 package com.dela.msscbeerinventoryservice.web.listeners;
 
-import com.dela.brewery.models.OrderAllocationRequest;
-import com.dela.brewery.models.OrderAllocationResponse;
+import com.dela.brewery.events.OrderAllocationRequest;
+import com.dela.brewery.events.OrderAllocationResponse;
 import com.dela.brewery.models.beer_order.BeerOrderDto;
 import com.dela.msscbeerinventoryservice.config.JmsConfig;
 import com.dela.msscbeerinventoryservice.web.services.AllocationService;
